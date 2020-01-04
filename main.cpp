@@ -12,6 +12,5 @@ int main()
     char board[24][40]={};
     fillboard(board);
     printBoard(board);
-    b=getchar();
     return 0;
 }
