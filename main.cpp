@@ -8,9 +8,9 @@ using namespace std;
 
 int main()
 {
-    char b;
     char board[24][40]={};
     fillboard(board);
     printBoard(board);
+
     return 0;
 }
