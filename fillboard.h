@@ -16,7 +16,7 @@ void fillboard(char board[24][40])
                         for(d=0;d<5;d++)
                         {
                             c++;
-                            board[i][c]='0';
+                            board[i][c]=(char)219u;
                         }
                     }
                     else if(n==1)
@@ -52,7 +52,7 @@ void fillboard(char board[24][40])
                             for(d=0;d<5;d++)
                             {
                                c++;
-                               board[i][c]='0';
+                               board[i][c]=(char)219u;
                             }
                         }
                         n==1 ? n=0 : n=1;
