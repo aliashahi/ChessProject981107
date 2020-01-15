@@ -6,6 +6,7 @@ void working8x8(char board[24][40],char workboard[8][8])
         col=2;
         for(j=0;j<8;j++)
         {
+            if(workboard[i][j]==' ')continue;
             board[row][col]=workboard[i][j];
             col=col+5;
         }
