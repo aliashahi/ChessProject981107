@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
+#include <conio.h>
 
 using namespace std;
 #include "printboard.h"
@@ -10,34 +11,42 @@ using namespace std;
 
 int main()
 {
-    string name1,name2,command1,command2;
+    string name1,name2,location1,location2;
     bool isend=false;
     char board[24][40]={};
-    char workboard[8][8]={'R','N','B','K','Q','B','N','R','S','S','S','S','S','S','S','S',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','S','S','S','S','S','S','S','S','R','N','B','K','Q','B','N','R'};
+    char workboard[8][8]={
+    'r','n','b','k','q','b','n','r'\
+    ,'s','s','s','s','s','s','s','s'\
+    ,' ',' ',' ',' ',' ',' ',' ',' '\
+    ,' ',' ',' ',' ',' ',' ',' ',' '\
+    ,' ',' ',' ',' ',' ',' ',' ',' '\
+    ,' ',' ',' ',' ',' ',' ',' ',' '\
+    ,'S','S','S','S','S','S','S','S'\
+    ,'R','N','B','Q','K','B','N','R'};
     fillboard(board);
     working8x8(board,workboard);
-    cout<<endl;
-    cout<<"Hi\nWelcome to our CHESS-GAME\nplease enter your name as first player:\n";
+    cout<<"\t\tHi\n\tWelcome to our CHESS-GAME\nplease enter your name as first player:\n";
     getline(cin,name1);
     cout<<"and now please enter second player's name:\n";
     getline(cin,name2);
-    
+
     while(isend==false)
     {
         working8x8(board,workboard);
         printBoard(board);
-        cout<<"\n\nplease enter your move or (e)xit\n";
-        getline(cin,command1);
-        if(command1=="e")
+        cout<<"\n(ex:a2 to a4)\n";
+        cout<<"\n\nplease enter your move or (ex)it\n";
+        getline(cin,location1);
+        if(location1[0]=='e'&&location1[1]=='x')
         {
             break;
         }
         cout<<"to:\n";
-        getline(cin,command2);
-        movepart(command1,command2,workboard);
-        system("CLS");
+        getline(cin,location2);
+        movepart(location1,location2,workboard);
+        cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
     }
-    cout<<"thanks for your playing XOXO\n";
+    cout<<"\t\t\tthanks for your playing XOXO\n";
 
     return 0;
 }

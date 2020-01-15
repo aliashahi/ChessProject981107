@@ -1,13 +1,16 @@
 void printBoard(char board[24][40])
 {
     int n=8;
-    cout<<"     A    B    C    D    E    F    G    H  \n";
+    cout<<"      A    B    C    D    E    F    G    H  \n ";
     for(int i=0;i<46;i++)
         cout<<":";
     cout<<endl;
     for(int i=0;i<24;i++)
     {
-        cout<<":: ";
+        if(i%3==1)
+        cout<<n<<":: ";
+        else
+        cout<<" :: ";
         for(int j=0;j<40;j++)
         {
             cout<<board[i][j];
@@ -20,6 +23,8 @@ void printBoard(char board[24][40])
         }
         cout<<endl;
     }
+        cout<<" ";
         for(int i=0;i<46;i++)
         cout<<":";
+    cout<<"\n      A    B    C    D    E    F    G    H  \n";
 }
