@@ -34,7 +34,7 @@ int main()
         }
         cout<<"to:\n";
         getline(cin,command2);
-        movepart(command1,command2,board,workboard);
+        movepart(command1,command2,workboard);
         system("CLS");
     }
     cout<<"thanks for your playing XOXO\n";
