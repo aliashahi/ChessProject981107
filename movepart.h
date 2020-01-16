@@ -31,6 +31,7 @@ void movepart(string location1,string location2,char workboard[8][8])
     getch();*/
     if(workboard[rowloc1][colloc1]=='b')bishap(1,rowloc1,colloc1,rowloc2,colloc2,workboard);
     if(workboard[rowloc1][colloc1]=='B')bishap(2,rowloc1,colloc1,rowloc2,colloc2,workboard);
-    if(workboard[rowloc1][colloc1]=='s')sarbaz(rowloc1,colloc1,rowloc2,colloc2,workboard);
     if(workboard[rowloc1][colloc1]=='S')sarbaz(rowloc1,colloc1,rowloc2,colloc2,workboard);
+    if(workboard[rowloc1][colloc1]=='s')sarbazbala(rowloc1,colloc1,rowloc2,colloc2,workboard);
+
 }

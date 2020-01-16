@@ -10,6 +10,8 @@ using namespace std;
 #include "fillboard.h"
 #include "yasin8x8.h"
 #include "bishap.h"
+#include "sarbaz.h"
+#include"sarbazbala.h"
 #include "movepart.h"
 
 
@@ -20,10 +22,10 @@ int main()
     char board[24][40]={};
     char workboard[8][8]={
     {'r','n','b','k','q','b','n','r'}\
-    ,{'s','s','s',' ','s','s','s','s'}\
-    ,{' ',' ',' ','s',' ',' ',' ',' '}\
+    ,{'s','s','s','s ','s','s','s','s'}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
+    ,{' ','Q',' ',' ',' ',' ',' ',' '}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
     ,{'S','S','S','S','S','S','S','S'}\
     ,{'R','N','B','Q','K','B','N','R'}};
