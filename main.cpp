@@ -10,6 +10,7 @@ using namespace std;
 #include "fillboard.h"
 #include "yasin8x8.h"
 #include "bishap.h"
+#include "sarbaz.h"
 #include "movepart.h"
 
 
