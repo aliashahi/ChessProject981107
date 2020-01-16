@@ -1,13 +1,17 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
+#include <string>
 #include <conio.h>
+#include <sstream>
 
 using namespace std;
 #include "printboard.h"
 #include "fillboard.h"
 #include "yasin8x8.h"
+#include "bishap.h"
 #include "movepart.h"
+
 
 int main()
 {
@@ -15,14 +19,14 @@ int main()
     bool isend=false;
     char board[24][40]={};
     char workboard[8][8]={
-    'r','n','b','k','q','b','n','r'\
-    ,'s','s','s','s','s','s','s','s'\
-    ,' ',' ',' ',' ',' ',' ',' ',' '\
-    ,' ',' ',' ',' ',' ',' ',' ',' '\
-    ,' ',' ',' ',' ',' ',' ',' ',' '\
-    ,' ',' ',' ',' ',' ',' ',' ',' '\
-    ,'S','S','S','S','S','S','S','S'\
-    ,'R','N','B','Q','K','B','N','R'};
+    {'r','n','b','k','q','b','n','r'}\
+    ,{'s','s','s',' ','s','s','s','s'}\
+    ,{' ',' ',' ','s',' ',' ',' ',' '}\
+    ,{' ',' ',' ',' ',' ',' ',' ',' '}\
+    ,{' ',' ',' ',' ',' ',' ',' ',' '}\
+    ,{' ',' ',' ',' ',' ',' ',' ',' '}\
+    ,{'S','S','S','S','S','S','S','S'}\
+    ,{'R','N','B','Q','K','B','N','R'}};
     fillboard(board);
     working8x8(board,workboard);
     cout<<"\t\tHi\n\tWelcome to our CHESS-GAME\nplease enter your name as first player:\n";
@@ -44,7 +48,6 @@ int main()
         cout<<"to:\n";
         getline(cin,location2);
         movepart(location1,location2,workboard);
-        cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
     }
     cout<<"\t\t\tthanks for your playing XOXO\n";
 
