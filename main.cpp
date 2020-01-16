@@ -11,7 +11,10 @@ using namespace std;
 #include "yasin8x8.h"
 #include "bishap.h"
 #include "sarbaz.h"
+<<<<<<< HEAD
 #include"sarbazbala.h"
+=======
+>>>>>>> 3b8f38c0de520d577db884bb4e29c16aade0ddd9
 #include "movepart.h"
 
 
