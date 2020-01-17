@@ -5,12 +5,12 @@ void rockpaeen(int r1,int c1,int r2,int c2,char w[8][8])
     y=r2-r1;
       if (((y!=0)&&(x!=0)))
       {
-          cout<<"error";
+          cout<<"error"<<"cant move like this "<<endl;
                 return;
       }
       else if (((int)w[r2][c2]==83)||((int)w[r2][c2]==82)||(int)(w[r2][c2]==78)||((int)w[r2][c2]==66)||((int)w[r2][c2]==75)||(int)(w[r2][c2]==81))
       {
-         cout<<"error";
+         cout<<"error"<<"mohre khodi "<<endl;
                 return;
       }
 
@@ -25,7 +25,7 @@ void rockpaeen(int r1,int c1,int r2,int c2,char w[8][8])
              //check az akhar be aval
              if (w[r1][c1+i]!=32)
              {
-                 cout<<"error";
+                 cout<<"error"<<"mohre in the way "<<endl;
                 return;
              }
          }
@@ -48,7 +48,7 @@ void rockpaeen(int r1,int c1,int r2,int c2,char w[8][8])
             //chek aval be akhar
             if (w[r1][c1+i]!=32)
             {
-                cout<<"error";
+                cout<<"error"<<"mohre in the way "<<endl;
                 return;
             }
         }
@@ -66,7 +66,7 @@ void rockpaeen(int r1,int c1,int r2,int c2,char w[8][8])
              //check az akhar be aval
              if (w[r1+i][c1]!=32)
              {
-                 cout<<"error";
+                 cout<<"error"<<"mohre in the way "<<endl;
                 return;
              }
          }
@@ -86,7 +86,7 @@ void rockpaeen(int r1,int c1,int r2,int c2,char w[8][8])
             //chek aval be akhar
             if (w[r1+i][c1]!=32)
             {
-                cout<<"error";
+                cout<<"error"<<"mohre in the way "<<endl;
                 return;
             }
         }

@@ -6,12 +6,12 @@ int y,x;
 
     if((x>1)||(x<-1)||(y<-1)||(y>1))
     {
-         cout<<"error";
+         cout<<"error"<<"cant move like this"<<endl;
                 return;
     }
      else if (((int)w[r2][c2]==115)||((int)w[r2][c2]==114)||(int)(w[r2][c2]==110)||((int)w[r2][c2]==98)||((int)w[r2][c2]==107)||(int)(w[r2][c2]==113))
       {
-         cout<<"error";
+         cout<<"error"<<"mohre khodi"<<endl;
                 return;
       }
       else
