@@ -11,11 +11,17 @@ using namespace std;
 #include "yasin8x8.h"
 #include "bishap.h"
 #include "sarbaz.h"
-<<<<<<< HEAD
 #include"sarbazbala.h"
-=======
->>>>>>> 3b8f38c0de520d577db884bb4e29c16aade0ddd9
+#include "nightpaeen.h"
+#include "nightbala.h"
+#include "rockpaeen.h"
+#include "rockbala.h"
+#include "queenpaeen.h"
+#include "queenbala.h"
+#include "kingpaeen.h"
+#include "kingbala.h"
 #include "movepart.h"
+
 
 
 int main()
@@ -25,13 +31,13 @@ int main()
     char board[24][40]={};
     char workboard[8][8]={
     {'r','n','b','k','q','b','n','r'}\
-    ,{'s','s','s','s ','s','s','s','s'}\
+    ,{' ','s','s',' ',' ','s','s','s'}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
-    ,{' ',' ',' ',' ',' ',' ',' ',' '}\
-    ,{' ','Q',' ',' ',' ',' ',' ',' '}\
-    ,{' ',' ',' ',' ',' ',' ',' ',' '}\
-    ,{'S','S','S','S','S','S','S','S'}\
-    ,{'R','N','B','Q','K','B','N','R'}};
+    ,{' ',' ',' ','Q',' ',' ',' ',' '}\
+    ,{' ',' ',' ',' ','q',' ',' ',' '}\
+    ,{' ',' ','q',' ',' ',' ',' ',' '}\
+    ,{' ','S','S',' ','S','S','S',' '}\
+    ,{'R','N','B','Q','K','B','n','R'}};
     fillboard(board);
     working8x8(board,workboard);
     cout<<"\t\tHi\n\tWelcome to our CHESS-GAME\nplease enter your name as first player:\n";

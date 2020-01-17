@@ -33,5 +33,12 @@ void movepart(string location1,string location2,char workboard[8][8])
     if(workboard[rowloc1][colloc1]=='B')bishap(2,rowloc1,colloc1,rowloc2,colloc2,workboard);
     if(workboard[rowloc1][colloc1]=='S')sarbaz(rowloc1,colloc1,rowloc2,colloc2,workboard);
     if(workboard[rowloc1][colloc1]=='s')sarbazbala(rowloc1,colloc1,rowloc2,colloc2,workboard);
-
+    if(workboard[rowloc1][colloc1]=='N')nightpaeen(rowloc1,colloc1,rowloc2,colloc2,workboard);
+    if(workboard[rowloc1][colloc1]=='n')nightbala(rowloc1,colloc1,rowloc2,colloc2,workboard);
+    if(workboard[rowloc1][colloc1]=='R')rockpaeen(rowloc1,colloc1,rowloc2,colloc2,workboard);
+    if(workboard[rowloc1][colloc1]=='r')rockbala(rowloc1,colloc1,rowloc2,colloc2,workboard);
+    if(workboard[rowloc1][colloc1]=='Q')queenpaeen(rowloc1,colloc1,rowloc2,colloc2,workboard);
+     if(workboard[rowloc1][colloc1]=='q')queenbala(rowloc1,colloc1,rowloc2,colloc2,workboard);
+      if(workboard[rowloc1][colloc1]=='K')kingpaeen(rowloc1,colloc1,rowloc2,colloc2,workboard);
+       if(workboard[rowloc1][colloc1]=='k')kingbala(rowloc1,colloc1,rowloc2,colloc2,workboard);
 }
