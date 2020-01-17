@@ -68,8 +68,6 @@ int main()
         }
         positionCon(location1,loc1);
         nCheck=mohrekhodi(*pointerPN,workboard[loc1[0]][loc1[1]]);
-        cout<<nCheck<<" ,"<<loc1[1];
-        getch();
         if(nCheck==2)
         {
             cout<<"\nERROR,This isn't your piece,\n\n";
