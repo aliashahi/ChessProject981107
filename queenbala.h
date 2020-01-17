@@ -5,7 +5,7 @@ int y,x;
     y=r2-r1;
     if ((x==0)||(y==0))
     {
-       rockbala(r1,c1,r2,c2,w);
+       rockbala(pn,r1,c1,r2,c2,w);
     }
     else bishap(pn,r1,c1,r2,c2,w);
 }

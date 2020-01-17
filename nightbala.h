@@ -1,4 +1,4 @@
-void nightbala(int r1,int c1,int r2,int c2,char w[8][8])
+void nightbala(int *pn,int r1,int c1,int r2,int c2,char w[8][8])
 {
  int y,x;
      x=c2-c1;
@@ -20,6 +20,7 @@ void nightbala(int r1,int c1,int r2,int c2,char w[8][8])
      {
          w[r2][c2]=w[r1][c1];
                     w[r1][c1]=' ';
+                    *pn==1 ? *pn=2 : *pn=1;
      }
 
 }

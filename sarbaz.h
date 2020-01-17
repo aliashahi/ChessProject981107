@@ -1,4 +1,4 @@
-void sarbaz(int r1,int c1,int r2,int c2,char w[8][8])
+void sarbaz(int *pn,int r1,int c1,int r2,int c2,char w[8][8])
 {
     int x,y,z=0;
    // while(z=1)
@@ -20,6 +20,7 @@ void sarbaz(int r1,int c1,int r2,int c2,char w[8][8])
                 {
                     w[r2][c2]=w[r1][c1];
                     w[r1][c1]=' ';
+                    *pn==1 ? *pn=2 : *pn=1;
 
 
 
@@ -28,7 +29,8 @@ void sarbaz(int r1,int c1,int r2,int c2,char w[8][8])
                 {
                     w[r2][c2]=w[r1][c1];
                     w[r1][c1]=' ';
-                 ;
+                    *pn==1 ? *pn=2 : *pn=1;
+
                 }
 
         //}
