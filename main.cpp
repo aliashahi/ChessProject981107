@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <stdlib.h>
 #include <string.h>
 #include <string>
@@ -29,6 +30,8 @@ using namespace std;
 int main()
 {
     string name1,name2,location1,location2;
+    string text;
+    ifstream ifs("welcomelogo.txt");//http://patorjk.com/software/taag/
     int loc1[2]={};
     int loc2[2]={};
     bool isEnd=false;
@@ -46,7 +49,12 @@ int main()
     ,{'R','N','B','Q','K','B','N','R'}};
     system("color 75");
     fillboard(board);
-    cout<<"\t\tHi\n\tWELCOME to CHESS-GAME\nPlease Enter your name as FIRST Player:\n";
+    while(!ifs.eof())
+    {
+      getline(ifs,text);
+      cout << "" << text << "\n" ;
+    }
+    cout<<"Please Enter your name as FIRST Player:\n";
     getline(cin,name1);
     cout<<"THANKS,\nand now Please Enter SECOND Player's name too:\n";
     getline(cin,name2);
