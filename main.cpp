@@ -71,12 +71,15 @@ int main()
         nCheck=mohrekhodi(*pointerPN,workboard[loc1[0]][loc1[1]]);
         if(nCheck==2)
         {
-            cout<<"\nERROR,This isn't your piece,\n\n";
+            system("cls");
+            cout<<"\n\n\n";
+            cout<<"\n\aERROR,This isn't your piece,\n\n";
             continue;
         }
         cout<<"to:\n";
         getline(cin,location2);
         positionCon(location2,loc2);
+        system("cls");
         movepart(pointerPN,loc1[0],loc1[1],loc2[0],loc2[1],workboard);
         }
         //player 2 black
@@ -96,17 +99,21 @@ int main()
         nCheck=mohrekhodi(*pointerPN,workboard[loc1[0]][loc1[1]]);
         if(nCheck==2)
         {
-            cout<<"\nERROR,This isn't your piece,\n\n";
+            system("cls");
+            cout<<"\n\n\n";
+            cout<<"\n\aERROR,This isn't your piece,\n\n";
             continue;
         }
         cout<<"to:\n";
         getline(cin,location2);
         positionCon(location2,loc2);
+        system("cls");
+        cout<<"\n\n\n";
         movepart(pointerPN,loc1[0],loc1[1],loc2[0],loc2[1],workboard);
         }
 
     }
-    cout<<"**thanks for playing XOXO**\n";
+    cout<<"**\athanks for playing XOXO**\n";
 
     return 0;
 }
