@@ -8,18 +8,18 @@ if (r1==6) a=-1;
     y=r2-r1;
     if (((y!=-1)&&(y!=-1+a))||(x>1))
         {
-        cout<<"\nERROR\n";
+        cout<<"\n\aERROR\n";
         return;
         }
     else if((x==0)&&((int)w[r2][c2]!=32))
             {
-                cout<<"\nERROR\n";
+                cout<<"\n\aERROR\n";
                 return;
             }
 
              else if((x!=0)&&((int)w[r2][c2]==32))
             {
-                cout<<"\nERROR\n";
+                cout<<"\n\aERROR\n";
                 return;
             }
 
@@ -39,7 +39,4 @@ if (r1==6) a=-1;
                     *pn==1 ? *pn=2 : *pn=1;
 
                 }
-
-        //}
-                  // z=0;
 }

@@ -44,6 +44,7 @@ int main()
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
     ,{'S','S','S','S','S','S','S','S'}\
     ,{'R','N','B','Q','K','B','N','R'}};
+    system("color 75");
     fillboard(board);
     cout<<"\t\tHi\n\tWELCOME to CHESS-GAME\nPlease Enter your name as FIRST Player:\n";
     getline(cin,name1);

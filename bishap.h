@@ -4,7 +4,7 @@ void bishap(int *pn,int r1,int c1,int r2,int c2,char workboard[8][8])
     int y=r2-r1;
     if(!(x==y||x==-1*y))
     {
-        cout<<"\nERROR, bishop can't move like this,\n";
+        cout<<"\n\aERROR, bishop can't move like this,\n";
         return;
     }
     //both positive move
@@ -23,10 +23,10 @@ void bishap(int *pn,int r1,int c1,int r2,int c2,char workboard[8][8])
 
                     if(c2==i+c1)
                     {
-                        cout<<"\nERROR,Its your own piece ,you can't take its place\n";
+                        cout<<"\n\aERROR,Its your own piece ,you can't take its place\n";
                         return;
                     }
-                    else cout<<"\nERROR,your own piece is in the way,\n";
+                    else cout<<"\n\aERROR,your own piece is in the way,\n";
                     return;
                }
                else if(n==2)
@@ -41,7 +41,7 @@ void bishap(int *pn,int r1,int c1,int r2,int c2,char workboard[8][8])
                     }
                     else
                     {
-                     cout<<"\nERROR,the enemy's piece is in the way,\n";
+                     cout<<"\n\aERROR,the enemy's piece is in the way,\n";
                      return;
                     }
                }
@@ -70,10 +70,10 @@ void bishap(int *pn,int r1,int c1,int r2,int c2,char workboard[8][8])
 
                     if(c2==i+c1)
                     {
-                        cout<<"\nERROR,Its your own piece ,you can't take its place\n";
+                        cout<<"\n\aERROR,Its your own piece ,you can't take its place\n";
                         return;
                     }
-                    else cout<<"\nERROR,your own piece is in the way,\n";
+                    else cout<<"\n\aERROR,your own piece is in the way,\n";
                     return;
                }
                else if(n==2)
@@ -87,7 +87,7 @@ void bishap(int *pn,int r1,int c1,int r2,int c2,char workboard[8][8])
                     }
                     else
                     {
-                     cout<<"\nERROR,the enemy's piece is in the way,\n";
+                     cout<<"\n\aERROR,the enemy's piece is in the way,\n";
                      return;
                     }
                }
@@ -115,10 +115,10 @@ void bishap(int *pn,int r1,int c1,int r2,int c2,char workboard[8][8])
 
                     if(c2==i+c1)
                     {
-                        cout<<"\nERROR,Its your own piece ,you can't take its place\n";
+                        cout<<"\n\aERROR,Its your own piece ,you can't take its place\n";
                         return;
                     }
-                    else cout<<"\nERROR,your own piece is in the way,\n";
+                    else cout<<"\n\aERROR,your own piece is in the way,\n";
                     return;
                }
                else if(n==2)
@@ -133,7 +133,7 @@ void bishap(int *pn,int r1,int c1,int r2,int c2,char workboard[8][8])
                     }
                     else
                     {
-                     cout<<"\nERROR,the enemy's piece is in the way,\n";
+                     cout<<"\n\aERROR,the enemy's piece is in the way,\n";
                      return;
                     }
                }
@@ -162,10 +162,10 @@ void bishap(int *pn,int r1,int c1,int r2,int c2,char workboard[8][8])
 
                     if(c2==i+c1)
                     {
-                        cout<<"\nERROR,Its your own piece ,you can't take its place\n";
+                        cout<<"\n\aERROR,Its your own piece ,you can't take its place\n";
                         return;
                     }
-                    else cout<<"\nERROR,your own piece is in the way,\n";
+                    else cout<<"\n\aERROR,your own piece is in the way,\n";
                     return;
                }
                else if(n==2)
@@ -174,13 +174,13 @@ void bishap(int *pn,int r1,int c1,int r2,int c2,char workboard[8][8])
                     {
                         workboard[r2][c2]=workboard[r1][c1];
                         workboard[r1][c1]=' ';
-                        cout<<"\nYou took enemy's piece,\n";
+                        cout<<"\n\aYou took enemy's piece,\n";
                         *pn==1 ? *pn=2 : *pn=1;
                         return;
                     }
                     else
                     {
-                     cout<<"\nERROR,the enemy's piece is in the way,\n";
+                     cout<<"\n\aERROR,the enemy's piece is in the way,\n";
                      return;
                     }
                }

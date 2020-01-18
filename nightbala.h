@@ -7,13 +7,13 @@ void nightbala(int *pn,int r1,int c1,int r2,int c2,char w[8][8])
       if (y<0) y=-y;
        if ((y>2)||(x>2)||(y<1)||(x<1)||((x+y)!=3))
       {
-          cout<<"error"<<"cant move like this"<<endl;
+         cout<<"\n\aERROR,can't move like this\n";
                 return;
       }
 
         else if (((int)w[r2][c2]==115)||((int)w[r2][c2]==114)||(int)(w[r2][c2]==110)||((int)w[r2][c2]==98)||((int)w[r2][c2]==107)||(int)(w[r2][c2]==113))
       {
-         cout<<"error"<<"mohre khodi"<<endl;
+         cout<<"\n\aERROR,It's your own piece\n";
                 return;
       }
      else
