@@ -59,7 +59,7 @@ int main()
         working8x8(board,workboard);
         printBoard(board);
         cout<<"\n(ex:a2 to a4)\n";
-        cout<<"\nIt's your turn "<<name1<<"\n";
+        cout<<"\n"<<name1<<" ,It's your turn,\n";
         cout<<"\n\nplease enter your move or (ex)it:\n";
         getline(cin,location1);
         if(location1[0]=='e'&&location1[1]=='x')
@@ -84,7 +84,7 @@ int main()
         working8x8(board,workboard);
         printBoard(board);
         cout<<"\n(ex:a2 to a4)\n";
-        cout<<"\nIt's your turn "<<name2<<"\n";
+        cout<<"\n"<<name2<<" ,It's your turn,\n";
         cout<<"\n\nPlease Enter your Move or (ex)it:\n";
         getline(cin,location1);
         if(location1[0]=='e'&&location1[1]=='x')
@@ -105,7 +105,7 @@ int main()
         }
 
     }
-    cout<<"**thanks for your playing XOXO**\n";
+    cout<<"**thanks for playing XOXO**\n";
 
     return 0;
 }
