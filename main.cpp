@@ -1,10 +1,12 @@
 #include <iostream>
 #include <fstream>
+#define _WIN32_WINNT 0x0500
 #include <stdlib.h>
 #include <string.h>
 #include <string>
 #include <conio.h>
 #include <sstream>
+#include <windows.h>
 
 using namespace std;
 #include "positionConvertor.h"
@@ -31,6 +33,7 @@ int main()
 {
     string name1,name2,location1,location2;
     string text;
+    ifstream ifs2("endlogo.txt");
     ifstream ifs("welcomelogo.txt");//http://patorjk.com/software/taag/
     int loc1[2]={};
     int loc2[2]={};
@@ -48,7 +51,15 @@ int main()
     ,{'S','S','S','S','S','S','S','S'}\
     ,{'R','N','B','Q','K','B','N','R'}};
     system("color 75");
+    //for screean size
+      HWND console = GetConsoleWindow();
+      RECT r;
+      GetWindowRect(console, &r);
+  //end
     fillboard(board);
+    //resizing screen
+    MoveWindow(console, r.left, r.top, 550, 750, TRUE);
+
     while(!ifs.eof())
     {
       getline(ifs,text);
@@ -58,8 +69,10 @@ int main()
     getline(cin,name1);
     cout<<"THANKS,\nand now Please Enter SECOND Player's name too:\n";
     getline(cin,name2);
-    cout<<"THANKS\n\n"<<name1<<" you have white pieces with 'SMALL' characters to represent them,\n\n";
+    system("cls");
+    cout<<name1<<" you have white pieces with 'SMALL' characters to represent them,\n\n";
     cout<<"and "<<name2<<" you have Black pieces with 'CAPITAL' characters to represent them,\n\n";
+
     while(isEnd==false)
     {
         //player 1 white
@@ -121,7 +134,14 @@ int main()
         }
 
     }
-    cout<<"**\athanks for playing XOXO**\n";
+        system("color 04");
+        system("cls");
+        MoveWindow(console, r.left, r.top, 1250, 850, TRUE);
+        while(!ifs2.eof())
+    {
+      getline(ifs2,text);
+      cout << "" << text << "\n" ;
+    }
 
     return 0;
 }
