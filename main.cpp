@@ -34,7 +34,7 @@ int main()
     string name1,name2,location1,location2;
     string text;
     ifstream ifs2("endlogo.txt");
-    ifstream ifs("welcomelogo.txt");//http://patorjk.com/software/taag/
+    ifstream ifs("welcomelogo.txt");//http://patorjk.com/software/taag
     int loc1[2]={};
     int loc2[2]={};
     bool isEnd=false;
@@ -50,7 +50,7 @@ int main()
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
     ,{'S','S','S','S','S','S','S','S'}\
     ,{'R','N','B','Q','K','B','N','R'}};
-    system("color 75");
+    system("color cf");
     //for screean size
       HWND console = GetConsoleWindow();
       RECT r;
@@ -72,7 +72,7 @@ int main()
     system("cls");
     cout<<name1<<" you have white pieces with 'SMALL' characters to represent them,\n\n";
     cout<<"and "<<name2<<" you have Black pieces with 'CAPITAL' characters to represent them,\n\n";
-
+    system("color 75");
     while(isEnd==false)
     {
         //player 1 white
