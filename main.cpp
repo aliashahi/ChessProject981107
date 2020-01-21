@@ -34,13 +34,11 @@ using namespace std;
 int main()
 {
     string name1,name2,location1,location2;
-<<<<<<< HEAD
+
     int j;
-=======
     string text;
     ifstream ifs2("endlogo.txt");
     ifstream ifs("welcomelogo.txt");//http://patorjk.com/software/taag
->>>>>>> baa5fe99cf465d29b74f85ec8b0527e92cb228cd
     int loc1[2]={};
     int loc2[2]={};
     bool isEnd=false;
@@ -48,26 +46,21 @@ int main()
     int *pointerPN=&playerNumber;
     char board[24][40]={};
     char workboard[8][8]={
-    {' ',' ','n','r','b','q','k',' '}\
-    ,{' ',' ','s',' ',' ',' ',' ',' '}\
+    {'r','n','b','q','k','b','n','r'}\
+    ,{'s','s','s','s','s','s','s','s'}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
-<<<<<<< HEAD
-    ,{' ',' ',' ',' ',' ',' ','S',' '}\
-    ,{' ','B','R','K','Q','N',' ',' '}};
-
-=======
     ,{'S','S','S','S','S','S','S','S'}\
-    ,{'R','N','B','Q','K','B','N','R'}};
+    ,{'R','B','R','K','Q','B','N','R'}};
+
     system("color cf");
     //for screean size
       HWND console = GetConsoleWindow();
       RECT r;
       GetWindowRect(console, &r);
   //end
->>>>>>> baa5fe99cf465d29b74f85ec8b0527e92cb228cd
     fillboard(board);
     //resizing screen
     MoveWindow(console, r.left, r.top, 550, 750, TRUE);

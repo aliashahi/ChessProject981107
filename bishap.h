@@ -396,7 +396,6 @@ workboard[r1][c1]=' ';
                {
                     if(c2==i+c1)
                     {
-<<<<<<< HEAD
 
 
 
@@ -425,11 +424,10 @@ workboard[r1][c1]=' ';
                     }
                     else if(h==0)
                    {
-=======
+
                         workboard[r2][c2]=workboard[r1][c1];
                         workboard[r1][c1]=' ';
                         cout<<"\n\aYou took enemy's piece,\n";
->>>>>>> baa5fe99cf465d29b74f85ec8b0527e92cb228cd
                         *pn==1 ? *pn=2 : *pn=1;
                    }
 
