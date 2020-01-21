@@ -3,6 +3,7 @@ void movepart(int *pn/*pn stands for player's number*/,int rowloc1,int colloc1,i
 
     if(*pn==1)
     {
+
     if(workboard[rowloc1][colloc1]=='b')bishap(pn,rowloc1,colloc1,rowloc2,colloc2,workboard);
     else if(workboard[rowloc1][colloc1]=='s')sarbazbala(pn,rowloc1,colloc1,rowloc2,colloc2,workboard);
     else if(workboard[rowloc1][colloc1]=='n')nightbala(pn,rowloc1,colloc1,rowloc2,colloc2,workboard);

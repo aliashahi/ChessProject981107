@@ -11,6 +11,8 @@ using namespace std;
 #include "printboard.h"
 #include "fillboard.h"
 #include "yasin8x8.h"
+#include "kishtestbala.h"
+#include "kishtestpaeen.h"
 #include "bishap.h"
 #include "sarbaz.h"
 #include"sarbazbala.h"
@@ -29,6 +31,7 @@ using namespace std;
 int main()
 {
     string name1,name2,location1,location2;
+    int j;
     int loc1[2]={};
     int loc2[2]={};
     bool isEnd=false;
@@ -36,14 +39,15 @@ int main()
     int *pointerPN=&playerNumber;
     char board[24][40]={};
     char workboard[8][8]={
-    {'r','n','b','k','q','b','n','r'}\
-    ,{'s','s','s','s','s','s','s','s'}\
+    {' ',' ','n','r','b','q','k',' '}\
+    ,{' ',' ','s',' ',' ',' ',' ',' '}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
-    ,{'S','S','S','S','S','S','S','S'}\
-    ,{'R','N','B','Q','K','B','N','R'}};
+    ,{' ',' ',' ',' ',' ',' ','S',' '}\
+    ,{' ','B','R','K','Q','N',' ',' '}};
+
     fillboard(board);
     cout<<"\t\tHi\n\tWELCOME to CHESS-GAME\nPlease Enter your name as FIRST Player:\n";
     getline(cin,name1);
