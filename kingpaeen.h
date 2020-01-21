@@ -8,12 +8,12 @@ int y,x;
 
     if((x>1)||(x<-1)||(y<-1)||(y>1))
     {
-         cout<<"error"<<"cant move like this"<<endl;
+         cout<<"\n\aERROR,can't move like this\n";
                 return;
     }
     else if (((int)w[r2][c2]==83)||((int)w[r2][c2]==82)||(int)(w[r2][c2]==78)||((int)w[r2][c2]==66)||((int)w[r2][c2]==75)||(int)(w[r2][c2]==81))
       {
-         cout<<"error"<<"mohre khodi"<<endl;
+         cout<<"\n\aERROR,It's your own piece\n";
                 return;
       }
       else

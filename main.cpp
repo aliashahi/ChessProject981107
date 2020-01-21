@@ -1,9 +1,12 @@
 #include <iostream>
+#include <fstream>
+#define _WIN32_WINNT 0x0500
 #include <stdlib.h>
 #include <string.h>
 #include <string>
 #include <conio.h>
 #include <sstream>
+#include <windows.h>
 
 using namespace std;
 #include "positionConvertor.h"
@@ -31,7 +34,13 @@ using namespace std;
 int main()
 {
     string name1,name2,location1,location2;
+<<<<<<< HEAD
     int j;
+=======
+    string text;
+    ifstream ifs2("endlogo.txt");
+    ifstream ifs("welcomelogo.txt");//http://patorjk.com/software/taag
+>>>>>>> baa5fe99cf465d29b74f85ec8b0527e92cb228cd
     int loc1[2]={};
     int loc2[2]={};
     bool isEnd=false;
@@ -45,16 +54,37 @@ int main()
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
     ,{' ',' ',' ',' ',' ',' ',' ',' '}\
+<<<<<<< HEAD
     ,{' ',' ',' ',' ',' ',' ','S',' '}\
     ,{' ','B','R','K','Q','N',' ',' '}};
 
+=======
+    ,{'S','S','S','S','S','S','S','S'}\
+    ,{'R','N','B','Q','K','B','N','R'}};
+    system("color cf");
+    //for screean size
+      HWND console = GetConsoleWindow();
+      RECT r;
+      GetWindowRect(console, &r);
+  //end
+>>>>>>> baa5fe99cf465d29b74f85ec8b0527e92cb228cd
     fillboard(board);
-    cout<<"\t\tHi\n\tWELCOME to CHESS-GAME\nPlease Enter your name as FIRST Player:\n";
+    //resizing screen
+    MoveWindow(console, r.left, r.top, 550, 750, TRUE);
+
+    while(!ifs.eof())
+    {
+      getline(ifs,text);
+      cout << "" << text << "\n" ;
+    }
+    cout<<"Please Enter your name as FIRST Player:\n";
     getline(cin,name1);
     cout<<"THANKS,\nand now Please Enter SECOND Player's name too:\n";
     getline(cin,name2);
-    cout<<"THANKS\n\n"<<name1<<" you have white pieces with 'SMALL' characters to represent them,\n\n";
+    system("cls");
+    cout<<name1<<" you have white pieces with 'SMALL' characters to represent them,\n\n";
     cout<<"and "<<name2<<" you have Black pieces with 'CAPITAL' characters to represent them,\n\n";
+    system("color 75");
     while(isEnd==false)
     {
         //player 1 white
@@ -63,7 +93,7 @@ int main()
         working8x8(board,workboard);
         printBoard(board);
         cout<<"\n(ex:a2 to a4)\n";
-        cout<<"\nIt's your turn "<<name1<<"\n";
+        cout<<"\n"<<name1<<" ,It's your turn,\n";
         cout<<"\n\nplease enter your move or (ex)it:\n";
         getline(cin,location1);
         if(location1[0]=='e'&&location1[1]=='x')
@@ -74,12 +104,15 @@ int main()
         nCheck=mohrekhodi(*pointerPN,workboard[loc1[0]][loc1[1]]);
         if(nCheck==2)
         {
-            cout<<"\nERROR,This isn't your piece,\n\n";
+            system("cls");
+            cout<<"\n\n\n";
+            cout<<"\n\aERROR,This isn't your piece,\n\n";
             continue;
         }
         cout<<"to:\n";
         getline(cin,location2);
         positionCon(location2,loc2);
+        system("cls");
         movepart(pointerPN,loc1[0],loc1[1],loc2[0],loc2[1],workboard);
         }
         //player 2 black
@@ -88,7 +121,7 @@ int main()
         working8x8(board,workboard);
         printBoard(board);
         cout<<"\n(ex:a2 to a4)\n";
-        cout<<"\nIt's your turn "<<name2<<"\n";
+        cout<<"\n"<<name2<<" ,It's your turn,\n";
         cout<<"\n\nPlease Enter your Move or (ex)it:\n";
         getline(cin,location1);
         if(location1[0]=='e'&&location1[1]=='x')
@@ -99,17 +132,28 @@ int main()
         nCheck=mohrekhodi(*pointerPN,workboard[loc1[0]][loc1[1]]);
         if(nCheck==2)
         {
-            cout<<"\nERROR,This isn't your piece,\n\n";
+            system("cls");
+            cout<<"\n\n\n";
+            cout<<"\n\aERROR,This isn't your piece,\n\n";
             continue;
         }
         cout<<"to:\n";
         getline(cin,location2);
         positionCon(location2,loc2);
+        system("cls");
+        cout<<"\n\n\n";
         movepart(pointerPN,loc1[0],loc1[1],loc2[0],loc2[1],workboard);
         }
 
     }
-    cout<<"**thanks for your playing XOXO**\n";
+        system("color 04");
+        system("cls");
+        MoveWindow(console, r.left, r.top, 1250, 850, TRUE);
+        while(!ifs2.eof())
+    {
+      getline(ifs2,text);
+      cout << "" << text << "\n" ;
+    }
 
     return 0;
 }

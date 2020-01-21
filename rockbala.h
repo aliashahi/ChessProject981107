@@ -19,12 +19,12 @@ char t,j;
 
       if (((y!=0)&&(x!=0)))
       {
-          cout<<"error"<<"cant move like this"<<endl;
+         cout<<"\n\aERROR,can't move like this\n";
                 return;
       }
       else if (((int)w[r2][c2]==115)||((int)w[r2][c2]==114)||(int)(w[r2][c2]==110)||((int)w[r2][c2]==98)||((int)w[r2][c2]==107)||(int)(w[r2][c2]==113))
       {
-         cout<<"error"<<"mohre khodi"<<endl;
+         cout<<"\n\aERROR,It's your own piece\n";
                 return;
       }
 
@@ -39,7 +39,7 @@ char t,j;
              //check az akhar be aval
              if (w[r1][c1+i]!=32)
              {
-                 cout<<"error"<<"mohre in the way "<<endl;
+                 cout<<"\n\aERROR,it's way is blocked\n";
                 return;
              }
          }

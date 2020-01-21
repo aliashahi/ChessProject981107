@@ -7,12 +7,12 @@ void rockpaeen(int *pn,int r1,int c1,int r2,int c2,char w[8][8])
     y=r2-r1;
       if (((y!=0)&&(x!=0)))
       {
-          cout<<"error"<<"cant move like this "<<endl;
+         cout<<"\n\aERROR,can't move like this\n";
                 return;
       }
       else if (((int)w[r2][c2]==83)||((int)w[r2][c2]==82)||(int)(w[r2][c2]==78)||((int)w[r2][c2]==66)||((int)w[r2][c2]==75)||(int)(w[r2][c2]==81))
       {
-         cout<<"error"<<"mohre khodi "<<endl;
+         cout<<"\n\aERROR,It's your own piece\n";
                 return;
       }
 
@@ -27,7 +27,7 @@ void rockpaeen(int *pn,int r1,int c1,int r2,int c2,char w[8][8])
              //check az akhar be aval
              if (w[r1][c1+i]!=32)
              {
-                 cout<<"error"<<"mohre in the way "<<endl;
+                 cout<<"\n\aERROR,it's way is blocked\n";
                 return;
              }
          }
