@@ -12,9 +12,9 @@ void positionCon(string location,int loc[2])
     else if(location[0]=='f')col=5;
     else if(location[0]=='g')col=6;
     else if(location[0]=='h')col=7;
-    else cout<<"\nERROR in column of location\n";
+    else cout<<"\n\aERROR in column of location\n";
     if(1<= x <=8)row=8-x;
-    else cout<<"\nERROR in row of first location\n";
+    else cout<<"\n\aERROR in row of first location\n";
     loc[0]=row;
     loc[1]=col;
 }

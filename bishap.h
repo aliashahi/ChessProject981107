@@ -1,26 +1,20 @@
 void bishap(int *pn,int r1,int c1,int r2,int c2,char workboard[8][8])
 {
-     char t,j,g;
-
+    char t,j,g;
     int r,c,h;
     int n=0,x=c2-c1;
     int y=r2-r1;
 
-
+    //PLAYER ONE
     if(*pn==1)
     {
-         g='k';
-
-
-
-
-
-    if(!(x==y||x==-1*y))
-    {
-        cout<<"\n\aERROR, bishop can't move like this,\n";
-        return;
-    }
-    //both positive move
+        g='k';
+        if(!(x==y||x==-1*y))
+        {
+            cout<<"\n\aERROR, bishop can't move like this,\n";
+            return;
+        }
+        //both positive move
     if(x>0&&y>0)
     {
        for(int i=1;i<=x;i++)
@@ -33,7 +27,6 @@ void bishap(int *pn,int r1,int c1,int r2,int c2,char workboard[8][8])
                //n=1>>mohre khodi and n=2>> harif
                if(n==1)
                {
-
                     if(c2==i+c1)
                     {
                         cout<<"\n\aERROR,Its your own piece ,you can't take its place\n";
@@ -46,93 +39,61 @@ void bishap(int *pn,int r1,int c1,int r2,int c2,char workboard[8][8])
                {
                     if(c2==i+c1)
                     {
-
-
-
-
-
-                   j=workboard[r1][c1];
-           t=workboard[r2][c2];
-
-         workboard[r2][c2]=workboard[r1][c1];
-workboard[r1][c1]=' ';
-
-      //
-    for(r=0;r<8;r++)
-  {
-    for(c=0;c<8;c++)
-    {
-        if (workboard[r][c]==g)
-          h=kishtestbala(r,c,workboard);
-    }
-}//
-                    if (h==1)
-                    {
-                        workboard[r1][c1]=j;
-                       workboard[r2][c2]=t;
-                         cout<<"error"<<"  kishhhh!!"<<endl;
-                    }
-                    else if(h==0)
-                   {
-                        *pn==1 ? *pn=2 : *pn=1;
-                   }
-
-
-
-
-
-
-
+                        j=workboard[r1][c1];
+                        t=workboard[r2][c2];
+                        workboard[r2][c2]=workboard[r1][c1];
+                        workboard[r1][c1]=' ';
+                        for(r=0;r<8;r++)
+                        {
+                            for(c=0;c<8;c++)
+                            {
+                                if(workboard[r][c]==g)
+                                  h=kishtestbala(r,c,workboard);
+                            }
+                        }
+                        if(h==1)
+                        {
+                            workboard[r1][c1]=j;
+                            workboard[r2][c2]=t;
+                            cout<<"error"<<"  kishhhh!!"<<endl;
+                        }
+                        else if(h==0)
+                        {
+                            *pn==1 ? *pn=2 : *pn=1;
+                        }
                         return;
                     }
                     else
                     {
-                     cout<<"\n\aERROR,the enemy's piece is in the way,\n";
-                     return;
+                        cout<<"\n\aERROR,the enemy's piece is in the way,\n";
+                        return;
                     }
                }
            }
        }
-
-
-
-
-
-
-
-                   j=workboard[r1][c1];
-           t=workboard[r2][c2];
-
-         workboard[r2][c2]=workboard[r1][c1];
-workboard[r1][c1]=' ';
-
-      //
+       j=workboard[r1][c1];
+       t=workboard[r2][c2];
+       workboard[r2][c2]=workboard[r1][c1];
+       workboard[r1][c1]=' ';
     for(r=0;r<8;r++)
-  {
-    for(c=0;c<8;c++)
+        {
+            for(c=0;c<8;c++)
+            {
+                if(workboard[r][c]==g)
+                    h=kishtestbala(r,c,workboard);
+            }
+        }
+    if(h==1)
     {
-        if (workboard[r][c]==g)
-          h=kishtestbala(r,c,workboard);
+        workboard[r1][c1]=j;
+        workboard[r2][c2]=t;
+        cout<<"error"<<"  kishhhh!!"<<endl;
     }
-}//
-                    if (h==1)
-                    {
-                        workboard[r1][c1]=j;
-                       workboard[r2][c2]=t;
-                         cout<<"error"<<"  kishhhh!!"<<endl;
-                    }
-                    else if(h==0)
-                   {
-                        *pn==1 ? *pn=2 : *pn=1;
-                   }
-
-
-
-
-
-
-
-       return;
+    else if(h==0)
+    {
+        *pn==1 ? *pn=2 : *pn=1;
+    }
+    return;
     }
     //end of scope both positive move
         //both negative move
@@ -148,7 +109,6 @@ workboard[r1][c1]=' ';
                //n=1>>mohre khodi and n=2>> harif
                if(n==1)
                {
-
                     if(c2==i+c1)
                     {
                         cout<<"\n\aERROR,Its your own piece ,you can't take its place\n";
@@ -161,100 +121,64 @@ workboard[r1][c1]=' ';
                {
                     if(c2==i+c1)
                     {
-
-
-
-
-
-                   j=workboard[r1][c1];
-           t=workboard[r2][c2];
-
-         workboard[r2][c2]=workboard[r1][c1];
-workboard[r1][c1]=' ';
-
-      //
-    for(r=0;r<8;r++)
-  {
-    for(c=0;c<8;c++)
-    {
-        if (workboard[r][c]==g)
-          h=kishtestbala(r,c,workboard);
-    }
-}//
-                    if (h==1)
-                    {
-                        workboard[r1][c1]=j;
-                       workboard[r2][c2]=t;
-                         cout<<"error"<<"  kishhhh!!"<<endl;
-                    }
-                    else if(h==0)
-                   {
-                        *pn==1 ? *pn=2 : *pn=1;
-                   }
-
-
-
-
-
-
-
-
+                        j=workboard[r1][c1];
+                        t=workboard[r2][c2];
+                        workboard[r2][c2]=workboard[r1][c1];
+                        workboard[r1][c1]=' ';
+                        for(r=0;r<8;r++)
+                        {
+                            for(c=0;c<8;c++)
+                            {
+                                if(workboard[r][c]==g)
+                                    h=kishtestbala(r,c,workboard);
+                            }
+                        }
+                        if (h==1)
+                        {
+                            workboard[r1][c1]=j;
+                            workboard[r2][c2]=t;
+                            cout<<"error"<<"  kishhhh!!"<<endl;
+                        }
+                        else if(h==0)//CHANGEING PLAYER
+                        {
+                            *pn==1 ? *pn=2 : *pn=1;
+                        }
                         return;
                     }
                     else
                     {
-                     cout<<"\n\aERROR,the enemy's piece is in the way,\n";
-                     return;
+                        cout<<"\n\aERROR,the enemy's piece is in the way,\n";
+                        return;
                     }
                }
            }
        }
-
-
-
-
-
-
-
-
-
-
-                   j=workboard[r1][c1];
-           t=workboard[r2][c2];
-
-         workboard[r2][c2]=workboard[r1][c1];
-workboard[r1][c1]=' ';
-
-      //
-    for(r=0;r<8;r++)
-  {
-    for(c=0;c<8;c++)
-    {
-        if (workboard[r][c]==g)
-          h=kishtestbala(r,c,workboard);
-    }
-}//
-                    if (h==1)
-                    {
-                        workboard[r1][c1]=j;
-                       workboard[r2][c2]=t;
-                         cout<<"error"<<"  kishhhh!!"<<endl;
-                    }
-                    else if(h==0)
-                   {
-                        *pn==1 ? *pn=2 : *pn=1;
-                   }
-
-
-
-
-
-
-
-       return;
+       j=workboard[r1][c1];
+       t=workboard[r2][c2];
+       workboard[r2][c2]=workboard[r1][c1];
+       workboard[r1][c1]=' ';
+       for(r=0;r<8;r++)
+       {
+            for(c=0;c<8;c++)
+            {
+                if(workboard[r][c]==g)
+                  h=kishtestbala(r,c,workboard);
+            }
+        }
+       if(h==1)
+        {
+            workboard[r1][c1]=j;
+            workboard[r2][c2]=t;
+            cout<<"error"<<"  kishhhh!!"<<endl;
+        }
+        else if(h==0)
+        {
+            *pn==1 ? *pn=2 : *pn=1;
+        }
+        return;
     }
     //end of scope both negative move
-        //negative x and positive y
+    //negative x and positive y
     if(x<0&&y>0)
     {
        for(int i=x;0<i;i--)
@@ -280,94 +204,61 @@ workboard[r1][c1]=' ';
                {
                     if(c2==i+c1)
                     {
-
-
-
-
-
-                   j=workboard[r1][c1];
-           t=workboard[r2][c2];
-
-         workboard[r2][c2]=workboard[r1][c1];
-workboard[r1][c1]=' ';
-
-      //
-    for(r=0;r<8;r++)
-  {
-    for(c=0;c<8;c++)
-    {
-        if (workboard[r][c]==g)
-          h=kishtestbala(r,c,workboard);
-    }
-}//
+                        j=workboard[r1][c1];
+                        t=workboard[r2][c2];
+                        workboard[r2][c2]=workboard[r1][c1];
+                        workboard[r1][c1]=' ';
+                        for(r=0;r<8;r++)
+                        {
+                            for(c=0;c<8;c++)
+                            {
+                                if(workboard[r][c]==g)
+                                  h=kishtestbala(r,c,workboard);
+                            }
+                        }
                     if (h==1)
                     {
                         workboard[r1][c1]=j;
-                       workboard[r2][c2]=t;
-                         cout<<"error"<<"  kishhhh!!"<<endl;
+                        workboard[r2][c2]=t;
+                        cout<<"error"<<"  kishhhh!!"<<endl;
                     }
                     else if(h==0)
                    {
                         *pn==1 ? *pn=2 : *pn=1;
                    }
-
-
-
-
-
-
-
+                   return;
+                   }
+                   else
+                   {
+                        cout<<"\n\aERROR,the enemy's piece is in the way,\n";
                         return;
-                    }
-                    else
-                    {
-                     cout<<"\n\aERROR,the enemy's piece is in the way,\n";
-                     return;
-                    }
+                   }
                }
            }
        }
-
-
-
-
-
-
-
-
-                   j=workboard[r1][c1];
-           t=workboard[r2][c2];
-
-         workboard[r2][c2]=workboard[r1][c1];
-workboard[r1][c1]=' ';
-
-      //
-    for(r=0;r<8;r++)
-  {
-    for(c=0;c<8;c++)
-    {
-        if (workboard[r][c]==g)
-          h=kishtestbala(r,c,workboard);
-    }
-}//
-                    if (h==1)
-                    {
-                        workboard[r1][c1]=j;
-                       workboard[r2][c2]=t;
-                         cout<<"error"<<"  kishhhh!!"<<endl;
-                    }
-                    else if(h==0)
-                   {
-                        *pn==1 ? *pn=2 : *pn=1;
-                   }
-
-
-
-
-
-
-
-       return;
+       j=workboard[r1][c1];
+       t=workboard[r2][c2];
+       workboard[r2][c2]=workboard[r1][c1];
+       workboard[r1][c1]=' ';
+        for(r=0;r<8;r++)
+      {
+        for(c=0;c<8;c++)
+        {
+            if (workboard[r][c]==g)
+              h=kishtestbala(r,c,workboard);
+        }
+      }
+      if(h==1)
+        {
+            workboard[r1][c1]=j;
+            workboard[r2][c2]=t;
+            cout<<"error"<<"  kishhhh!!"<<endl;
+        }
+        else if(h==0)
+        {
+            *pn==1 ? *pn=2 : *pn=1;
+        }
+        return;
     }
     //end of scope x and positive y
         //negative y and positive x
@@ -396,51 +287,33 @@ workboard[r1][c1]=' ';
                {
                     if(c2==i+c1)
                     {
-
-
-
-
-
-                   j=workboard[r1][c1];
-           t=workboard[r2][c2];
-
-         workboard[r2][c2]=workboard[r1][c1];
-workboard[r1][c1]=' ';
-
-      //
-    for(r=0;r<8;r++)
-  {
-    for(c=0;c<8;c++)
-    {
-        if (workboard[r][c]==g)
-          h=kishtestbala(r,c,workboard);
-    }
-}//
-                    if (h==1)
-                    {
-                        workboard[r1][c1]=j;
-                       workboard[r2][c2]=t;
-                         cout<<"error"<<"  kishhhh!!"<<endl;
-                    }
-                    else if(h==0)
-                   {
-
+                        j=workboard[r1][c1];
+                        t=workboard[r2][c2];
                         workboard[r2][c2]=workboard[r1][c1];
                         workboard[r1][c1]=' ';
-                        cout<<"\n\aYou took enemy's piece,\n";
-                        *pn==1 ? *pn=2 : *pn=1;
-                   }
-
-
-
-
-
-
-
-
-
-                        return;
-                    }
+                        for(r=0;r<8;r++)
+                      {
+                        for(c=0;c<8;c++)
+                        {
+                            if(workboard[r][c]==g)
+                              h=kishtestbala(r,c,workboard);
+                        }
+                      }
+                        if (h==1)
+                        {
+                            workboard[r1][c1]=j;
+                            workboard[r2][c2]=t;
+                            cout<<"error"<<"  kishhhh!!"<<endl;
+                        }
+                        else if(h==0)
+                       {
+                            workboard[r2][c2]=workboard[r1][c1];
+                            workboard[r1][c1]=' ';
+                            cout<<"\n\aYou took enemy's piece,\n";
+                            *pn==1 ? *pn=2 : *pn=1;
+                       }
+                   return;
+                }
                     else
                     {
                      cout<<"\n\aERROR,the enemy's piece is in the way,\n";
